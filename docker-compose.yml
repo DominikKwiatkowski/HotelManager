@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+ hoteldb:
+    image: mongo
+ hotelmanager:
+    image: ${DOCKER_REGISTRY-}hotelmanager
+    build:
+      context: .
+      dockerfile: HotelManager/Dockerfile

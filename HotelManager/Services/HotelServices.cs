@@ -29,7 +29,7 @@ namespace HotelManager.Services
 
         public void UpdateHotel(HotelDataModel hotel)
         {
-            context.HotelCollection.ReplaceOne(x => x.Id == hotel.Id, hotel);
+            var result = context.HotelCollection.ReplaceOne(x => x.Id == hotel.Id, hotel);
         }
 
         public void RemoveHotel(int id)
